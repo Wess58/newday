@@ -1,0 +1,49 @@
+<div class="container-fluid home">
+
+  <!-- LANDING SECTION -->
+  <main [@fadeIn]>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-9 position-relative">
+          <div class="content">
+            <h1>{{content.title}}</h1>
+            <p>{{content.description}}</p>
+            <button class="btn btn-cta" [routerLink]="'/'">Contact us</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- SERVICES SECTION -->
+  <div id="services">
+    <div class="container">
+
+
+      <div class="row mx-0 mb-5">
+        <div class="col-md-3" *ngFor="let service of services;index as i">
+          <div class="service-item">
+            <h4>{{service.title}}</h4>
+            <p>{{service.description}}</p>
+            <span class="inquire">Inquire <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <div class="illustration-holder">
+            <img src="assets/images/growth-stats.svg" alt="">
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+          <span class="services-section-description">Helping you implement solutions that are tailored to your specific needs using <strong>mordern</strong> methodologies and tools to optimize your <strong>return on investment</strong>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

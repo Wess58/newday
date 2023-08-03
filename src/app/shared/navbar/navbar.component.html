@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{'scrolled':morphNavbar}">
+  <a class="navbar-brand" [routerLink]="'/home'">
+    <span>New Day</span> Communications
+  </a>
+
+  <button class="navbar-toggler d-block d-md-none" type="button" (click)="toggleIcon()">
+    <i class="fas fa-bars" id="menuIcon" *ngIf="!changeIcon" [@fadeIn]></i>
+    <i class="fas fa-times" id="menuIcon" *ngIf="changeIcon" [@fadeIn]></i>
+  </button>
+
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  </div> -->
+  <ul class="navbar-nav ml-auto d-none d-md-flex">
+    <li class="nav-item active">
+      <a class="nav-link" [routerLink]="'/home'" [ngClass]="{'active-link':router.url.includes('home') || router.url.length < 2}">Home<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#services" [ngClass]="{'active-link':router.url.includes('podcast')}">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about" [ngClass]="{'active-link':router.url.includes('about')}">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact" [ngClass]="{'active-link':router.url.includes('contact')}">Contact us</a>
+    </li>
+    <!-- <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+        Dropdown
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li> -->
+
+  </ul>
+
+  <div class="side-menu" [ngClass]="{'open-side-menu':changeIcon}" (click)="toggleIcon()">
+
+    <ul>
+      <li class="nav-item" [routerLink]="'/home'" [ngClass]="{'active-link-ms':router.url.includes('home') || router.url.length < 2}">
+        <a class="nav-link-ms">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" href="#services" [ngClass]="{'active-link-ms':router.url.includes('podcast')}">
+        <a class="nav-link-ms">Services</a>
+      </li>
+      <li class="nav-item" href="about" [ngClass]="{'active-link-ms':router.url.includes('about')}">
+        <a class="nav-link-ms">About</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active-link-ms':router.url.includes('contact')}">
+        <a class="nav-link-ms" href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
