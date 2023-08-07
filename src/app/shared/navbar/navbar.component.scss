@@ -7,7 +7,7 @@
     color: #fff;
     font-weight: 600;
 
-    span{
+    span {
       color: #90BF4D;
     }
   }
@@ -155,13 +155,6 @@
   }
 }
 @media (max-width: 1000px) {
-  .navbar-brand {
-    img {
-      height: 50px!important;
-      filter: drop-shadow(0 5px 2px #4673b640);
-    }
-  }
-
   .navbar-nav {
     display: flex;
     flex-direction: row;
@@ -172,4 +165,8 @@
     }
   }
 }
-@media (min-width: 500px) {}
+@media (max-width: 500px) {
+  .navbar-brand {
+    font-size: 1rem!important;
+  }
+}
