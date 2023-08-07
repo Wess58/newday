@@ -4,7 +4,7 @@
   <main [@fadeIn]>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-9 position-relative">
+        <div class="col-12 col-md-12 col-lg-9 position-relative">
           <div class="content">
             <h1>{{content.title}}</h1>
             <p>{{content.description}}</p>
@@ -21,9 +21,10 @@
   <div id="services">
     <div class="container">
 
+      <h3 class="section-title">What We <span>Do</span></h3>
 
-      <div class="row mx-0 mb-5">
-        <div class="col-md-3" *ngFor="let service of services;index as i">
+      <div class="row mb-5">
+        <div class="col-md-4 col-lg-3" *ngFor="let service of services;index as i">
           <div class="service-item">
             <h4>{{service.title}}</h4>
             <p>{{service.description}}</p>

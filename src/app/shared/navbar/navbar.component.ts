@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
         this.morphNavbar = false;
       }
     } else {
-      if ((window.pageYOffset / window.innerHeight * 100) > 60) {
+      if ((window.pageYOffset / window.innerHeight * 100) > 10) {
         this.morphNavbar = true;
       } else {
         this.morphNavbar = false;
