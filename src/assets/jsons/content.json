@@ -1,7 +1,24 @@
 {
   "landing": {
     "title": "Stay ahead of the trends with forwad-thinking solutions",
-    "description":"Leverage our cutting-edge solutions for your business and customer needs to gain a competitive edge in the market.",
+    "description": "Leverage our cutting-edge solutions for your business and customer needs to gain a competitive edge in the market.",
     "imgUrl": "assets/images/mercy-landing-pic.png"
-  }
+  },
+  "principles": [{
+      "title": "Disruptive Innovation",
+      "description": "We are always looking for new and better ways to create and deliver mobile content solutions that meet the needs and expectations of our customers and the market. We embrace change and challenge ourselves to improve our products, services, and processes."
+    },
+    {
+      "title": "Quality Assurance",
+      "description": "We are committed to providing high-quality mobile content solutions that are reliable, effective, and user-friendly. We constantly monitor and evaluate our performance and seek feedback from our customers and partners."
+    },
+    {
+      "title": "Customer Satisfaction",
+      "description": "We are dedicated to satisfying our customers by understanding their needs and preferences and providing them with mobile content solutions that add value to their businesses and lives. We strive to build long-term relationships with our customers based on trust and respect."
+    },
+    {
+      "title": "Teamwork",
+      "description": "We are a team of talented and passionate individuals who work together to achieve our common goals and vision. We value diversity and inclusion and respect each other's opinions and contributions. We support each other's growth and development and celebrate our successes."
+    }
+  ]
 }

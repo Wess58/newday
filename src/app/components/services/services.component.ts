@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
-import content from "../../../assets/jsons/content.json";
+import services from "../../../assets/jsons/services.json";
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.scss'],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [   // :enter is alias to 'void => *'
@@ -25,10 +25,9 @@ import content from "../../../assets/jsons/content.json";
     ])
   ]
 })
-export class AboutComponent implements OnInit {
+export class ServicesComponent implements OnInit {
 
-  principles: any = content.principles;
-
+  services: any = services.services;
 
   constructor() { }
 

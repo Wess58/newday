@@ -5,8 +5,7 @@
 @import './assets/css/font-great-vibes.css'; // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-// green - 90BF4D
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css'; // green - 90BF4D
 // lightblue - 27B8E4
 // white-skin color -  ffb6b6
 // dark-skin color - a0616a
@@ -62,9 +61,17 @@ button {
 }
 @media (max-width: 1500px) {
   .container {
+    max-width: 80vw;
+  }
+}
+@media (max-width: 1380px) {
+  .container {
     max-width: 90vw;
   }
 }
-@media (max-width: 1100px) {}
 @media (max-width: 1000px) {}
-@media (max-width: 600px) {}
+@media (max-width: 600px) {
+  .container {
+    max-width: 96%!important;
+  }
+}

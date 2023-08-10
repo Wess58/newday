@@ -18,14 +18,18 @@
 
 
   <!-- SERVICES SECTION -->
-  <div id="services">
+  <div id="services" [@fadeIn]>
     <div class="container">
 
       <h3 class="section-title">What We <span>Do</span></h3>
 
       <div class="row mb-5">
-        <div class="col-md-4 col-lg-3" *ngFor="let service of services;index as i">
+        <div class="col-md-4 col-lg-3" *ngFor="let service of services.slice(0,4);index as i">
           <div class="service-item">
+            <div class="service-illustration-holder">
+              <img [src]="service.illustrationUrl" alt="">
+            </div>
+
             <h4>{{service.title}}</h4>
             <p>{{service.description}}</p>
             <span class="inquire">Inquire <i class="fa-solid fa-arrow-right-long"></i></span>
@@ -33,6 +37,30 @@
         </div>
       </div>
 
+      <button class="btn btn-view-more-services" routerLink="'/services'">View all services <i class="fa-solid fa-arrow-right-long"></i></button>
+
+    </div>
+  </div>
+
+
+  <!-- STATS SECTION -->
+
+  <div class="stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let stat of stats">
+          <div class="card">
+            <span class="figure">{{stat.figure}} <span class="percentage">%</span> </span>
+            <span class="title">{{stat.title}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="container">
       <div class="row align-items-center">
         <div class="col-md-5">
           <div class="illustration-holder">

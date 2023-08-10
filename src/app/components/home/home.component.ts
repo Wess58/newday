@@ -11,7 +11,7 @@ import services from "../../../assets/jsons/services.json";
     trigger('fadeIn', [
       transition(':enter', [   // :enter is alias to 'void => *'
         style({ opacity: 0 }),
-        animate(500, style({ opacity: 1 }))
+        animate(600, style({ opacity: 1 }))
       ])
     ]),
     trigger('fadeInGrow', [
@@ -29,10 +29,27 @@ import services from "../../../assets/jsons/services.json";
 export class HomeComponent implements OnInit {
   content: any = content.landing;
   services: any = services.services;
+  stats = [
+    {
+      title: "Audience content-reach",
+      figure: "90"
+    },
+    {
+      title: "Business growth rate",
+      figure: "95"
+    },
+    {
+      title: "Return of investment",
+      figure: "100"
+    }
+  ]
 
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      window.scroll(0, 0);
+    }, 10);
   }
 
 }

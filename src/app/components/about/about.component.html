@@ -1,1 +1,89 @@
-<p>about works!</p>
+<div class="container-fluid about" [@fadeIn]>
+  <div class="landing-section">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-9">
+          <div class="content">
+            <h1>About us</h1>
+            <p>
+              At New Day Communications, we're passionate about helping you achieve your goals and grow your business. We work with you to <strong>understand</strong> your challenges and provide <strong>customized solutions</strong> that suit your
+              budget and
+              timeline. That is why we offer a full range of <strong>complimentary services</strong> that help you connect with your customers, employees, partners, and stakeholders.
+            </p>
+            <!-- <button class="btn btn-cta" [routerLink]="'/'">Contact us</button> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="our-story">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+
+          <p>
+            New Day Communications is a leading provider of <strong>mobile content solutions</strong> for businesses and customers in the mobile telecommunications industry. We operate in the value-added service sectors in Kenya and aim to expand our
+            services across the African continent
+          </p>
+
+          <p>
+            We help businesses connect with their customers through our gateway platform that delivers <strong>content via mobile</strong>. Our platform also enables businesses to understand their customer segments, usage, and consumer behaviours.
+            With our expertise and experience in the value-added service business, we can handle the complexities of mobile operator integrations.
+
+          </p>
+
+          <p>
+            Our services in Kenya are powered by our dynamic platform that supports all bearers offered by mobile operators. This means that we can offer you a <strong>complete solution for all your mobile integration needs</strong>.
+          </p>
+          <p>
+            Whether you need Digital Content, Training, Business Process Documentation & Implementation, Product Development, Marketing and Management, Customer Value Management (<span class="font-weight-bold">CVM</span>),
+            Customer Experience Service, or Business Consultancy, we have you covered - because we believe that <strong>communication is the key to success</strong>.
+          </p>
+
+        </div>
+        <div class="col-md-5">
+
+          <div class="illustration">
+            <img src="assets/images/grow-business.svg" alt="illustration">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="principles">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <h3 class="section-title">Our Principles</h3>
+          <p class="section-description">New Day Communications' growth is powered by four core principles that guide our day-to-day decisions and define our culture.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3" *ngFor="let principle of principles;index as i">
+          <div class="card">
+            <span class="title">{{principle.title}}</span>
+            <span class="description">{{principle.description}}</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>

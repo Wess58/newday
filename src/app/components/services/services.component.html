@@ -1,0 +1,54 @@
+<div class="container-fluid services" [@fadeIn]>
+  <div class="landing-section">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-9 position-relative">
+          <div class="content">
+            <h1>What We Do</h1>
+            <p>
+              Whether you need to create engaging content, deliver effective training, document your processes, implement new products, develop marketing strategies, manage
+              customer relationships, improve customer experience, or consult on best practices, we are here to help.
+            </p>
+            <!-- <button class="btn btn-cta" [routerLink]="'/'">Contact us</button> -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="services-listing d-none d-md-block">
+      <div class="service-item" *ngFor="let service of services;index as i;even as even" [ngClass]="{'row-reverse':even}">
+        <div class="service-illustration-holder">
+          <img [src]="service.illustrationUrl" alt="">
+        </div>
+
+        <div class="position-relative">
+          <span class="service-index">{{i+1}}</span>
+          <h4>{{service.title}}</h4>
+          <p>{{service.description}}</p>
+          <span class="inquire">Inquire <i class="fa-solid fa-arrow-right-long"></i></span>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="services-listing-ms d-block d-md-none">
+      <div class="service-item" *ngFor="let service of services;index as i">
+        <div class="service-illustration-holder">
+          <img [src]="service.illustrationUrl" alt="">
+        </div>
+
+        <h4>{{service.title}}</h4>
+        <p>{{service.description}}</p>
+        <span class="inquire">Inquire <i class="fa-solid fa-arrow-right-long"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
