@@ -1,0 +1,75 @@
+<div class="container-fluid contact-form" id="contact-form" [ngClass]="{'padding-vh':!router.url.includes('services')}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5">
+
+        <h3 class="section-title" *ngIf="!router.url.includes('contact')">Contact <span>Us</span></h3>
+
+        <p class="section-description">
+          If you are interested in learning more about our services and how we can help you, please contact us today. We would love to hear from you and discuss your communication needs. We look forward to hearing from you and working with you.
+        </p>
+
+        <div class="social-links">
+          <a href="https://wa.me/" rel="external nofollow noopener" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="tel:+6544444644" target="_blank">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <a href="mailto:support@newday.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+
+        <div class="illustration-holder">
+          <img src="assets/images/contact.svg" alt="illustration">
+        </div>
+
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <div class="form">
+          <div class="form-group">
+            <label for="">Your name <sup class="redText">*</sup></label>
+            <input class="form-control" type="text" name="name" [(ngModel)]="user.name" autocomplete="new-password" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="">Organisation name</label>
+            <input class="form-control" type="text" name="orgName" [(ngModel)]="user.orgName" autocomplete="new-password" placeholder="Enter your organisation name">
+          </div>
+          <div class="form-group">
+            <label for="">Phone number <sup class="redText">*</sup></label>
+            <input class="form-control" type="text" name="phone" [(ngModel)]="user.phone" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9\.]/g, '').replace(/(\..*)\./g, '$1');"
+              placeholder="Enter your phone number" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="">Email <sup class="redText">*</sup><small class="redText fw-normal ml-2" *ngIf="emailInvalid" [@fadeIn]> Invalid email</small></label>
+            <input class="form-control" type="email" name="email" [(ngModel)]="user.email" (ngModelChange)="emailInvalid = false" #emailInput [ngClass]="{'form-error':emailInvalid}" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group" hidden>
+            <input class="form-control" type="text" name="name" [(ngModel)]="user.gotyou">
+          </div>
+
+          <div class="form-group">
+            <label for="">Category</label>
+            <select class="form-control" name="category" [(ngModel)]="user.category">
+              <option [value]="service.title" *ngFor="let service of services">{{service.title}}</option>
+              <option value="General">General</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="">Message <sup class="redText">*</sup></label>
+            <textarea class="form-control" name="message" rows="1" [(ngModel)]="user.message" placeholder="Type your message"></textarea>
+          </div>
+
+          <button class="btn btn-submit" [disabled]="!user.name || !user.email || !user.phone || !user.message">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+.contact{
+  .landing-section {
+    padding: 5vh 0;
+    background-color: #f8f9fa;
+    height: 400px;
+    background-image: linear-gradient(-25deg , #90BF4D 1%, rgba(0,0,0,0.7) 20%),url("../../../assets/images/bg-office.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+
+    .content {
+      padding: 3vh 0;
+      position: relative;
+      z-index: 10!important;
+
+      h1 {
+        font-weight: 600;
+        color: #90BF4D;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        line-height: 5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #fff;
+        width: 80%;
+        margin-bottom: 30px;
+
+        strong {
+          color: #90BF4D;
+        }
+      }
+
+      .btn-cta {
+        background-color: #90BF4D;
+        border: 1px solid #90BF4D;
+        border-radius: 30px;
+        font-style: 0.9rem;
+        letter-spacing: 1px;
+        color: #f1f1f1;
+        font-weight: 600;
+        padding: 10px 50px;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .landing-section {
+    padding-top: 100px!important;
+    height: auto!important;
+
+    .content {
+      h1 {
+        font-size: 2rem!important;
+        line-height: 2.5rem!important;
+      }
+
+      p {
+        width: 100%!important;
+      }
+    }
+  }
+}

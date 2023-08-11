@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{'scrolled':morphNavbar}">
-  <a class="navbar-brand" [routerLink]="'/home'">
+  <a class="navbar-brand" [routerLink]="'/home'" (click)="changeIcon = false">
     <span>New Day</span> Communications
   </a>
 
@@ -22,7 +22,7 @@
       <a class="nav-link" [routerLink]="'/about'" [ngClass]="{'active-link':router.url.includes('about')}">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#contact" [ngClass]="{'active-link':router.url.includes('contact')}">Contact us</a>
+      <a class="nav-link" [routerLink]="'/contact-us'" [ngClass]="{'active-link':router.url.includes('contact')}">Contact us</a>
     </li>
     <!-- <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -50,8 +50,8 @@
       <li class="nav-item" [routerLink]="'/about'" [ngClass]="{'active-link-ms':router.url.includes('about')}">
         <a class="nav-link-ms">About</a>
       </li>
-      <li class="nav-item" [ngClass]="{'active-link-ms':router.url.includes('contact')}">
-        <a class="nav-link-ms" href="#contact">Contact</a>
+      <li class="nav-item" [routerLink]="'/contact-us'" [ngClass]="{'active-link-ms':router.url.includes('contact')}">
+        <a class="nav-link-ms">Contact us</a>
       </li>
 
     </ul>

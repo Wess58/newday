@@ -23,7 +23,7 @@
 
   <div class="container">
     <div class="services-listing d-none d-md-block">
-      <div class="service-item" *ngFor="let service of services;index as i;even as even" [ngClass]="{'row-reverse':even}">
+      <div class="service-item" *ngFor="let service of services;index as i;odd as odd" [ngClass]="{'row-reverse':odd}">
         <div class="service-illustration-holder">
           <img [src]="service.illustrationUrl" alt="">
         </div>
@@ -51,4 +51,8 @@
       </div>
     </div>
   </div>
+
+
+  <app-contact-form></app-contact-form>
+
 </div>

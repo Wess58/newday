@@ -110,7 +110,7 @@
         position: absolute;
         bottom: 10px;
 
-        i{
+        i {
           margin-left: 5px;
         }
       }
@@ -135,48 +135,47 @@
 
       i {
         left: 5px;
-        transition: all .2s;
+        transition: all 0.2s;
         position: relative;
         font-size: 1rem;
       }
     }
   }
 
-  .stats{
-    padding: 10vh  0;
+  .stats {
+    padding: 10vh 0;
     background-color: #f8f9fa;
     border-top: 1px solid #e1e1e1;
 
-    .col-md-4{
+    .col-md-4 {
       border-radius: 0;
       border-right: 3px solid #90BF4D33;
 
-      &:last-child{
+      &:last-child {
         border-right: none;
       }
     }
 
-    .card{
+    .card {
       background-color: transparent;
       text-align: center;
       border: none;
       margin-bottom: 30px;
 
-
-      .figure{
+      .figure {
         color: #90BF4D;
         font-size: 3rem;
         font-weight: 600;
         margin-bottom: 10px;
 
-        .percentage{
+        .percentage {
           font-size: 1.5rem;
           position: relative;
           right: 10px;
         }
       }
 
-      .title{
+      .title {
         font-weight: 600;
         color: #5f6063;
         font-size: 1.1rem;
@@ -184,8 +183,16 @@
     }
   }
 
-  .cta-section{
-    padding: 10vh  0;
+  .cta-section {
+    padding: 10vh 0;
+    background-image: linear-gradient(to right , #fff8 100%,transparent),url("../../../assets/images/dots-bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top;
+    border-bottom: 1px solid #e1e1e1;
 
     .services-section-description {
       font-size: 1.7rem;
@@ -241,6 +248,8 @@
 }
 @media (max-width: 600px) {
   main {
+    // height: 350px!important;
+
     .content {
       h1 {
         font-size: 2rem!important;
@@ -266,13 +275,13 @@
     }
   }
 
-  .stats{
-    .col-md-4{
+  .stats {
+    .col-md-4 {
       border-right: none!important;
     }
   }
 
-  .cta-section{
+  .cta-section {
     .illustration-holder {
       img {
         margin-bottom: 5vh!important;

@@ -5,7 +5,8 @@
 @import './assets/css/font-great-vibes.css'; // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css'; // green - 90BF4D
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+// green - 90BF4D
 // lightblue - 27B8E4
 // white-skin color -  ffb6b6
 // dark-skin color - a0616a
@@ -51,6 +52,29 @@ button {
   // background-color: #80868b!important;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #80868b99 !important;
+  font-size: 12px;
+  opacity: 1;
+  font-family: 'Montserrat', sans-serif !important;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #80868b99 !important;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #80868b99 !important;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
@@ -58,6 +82,10 @@ button {
 
 .container {
   max-width: 70vw;
+}
+
+.redText {
+  color: #d11a2a !important;
 }
 @media (max-width: 1500px) {
   .container {
