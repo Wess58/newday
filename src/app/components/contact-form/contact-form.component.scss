@@ -124,6 +124,31 @@
       margin: 20px 0;
     }
   }
+
+  .success-div {
+    color: #5f6063;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center!important;
+
+    img {
+      width: 140px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-size: 1rem;
+      color: #90BF4D;
+    }
+
+    a {
+      color: #5f6063;
+      text-decoration: underline;
+    }
+  }
 }
 
 .padding-vh {

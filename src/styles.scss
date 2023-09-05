@@ -5,8 +5,7 @@
 @import './assets/css/font-great-vibes.css'; // @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 // @import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-// green - 90BF4D
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css'; // green - 90BF4D
 // lightblue - 27B8E4
 // white-skin color -  ffb6b6
 // dark-skin color - a0616a
@@ -86,6 +85,109 @@ button {
 
 .redText {
   color: #d11a2a !important;
+}
+
+#serviceRequestModal {
+  .modal-header {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.09);
+  }
+
+  .modal-body {
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px #e1e1e1;
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 15px;
+      background: #003d4c;
+    }
+
+    .description {
+      color: #5f6063;
+    }
+
+    input,
+    select,
+    textarea {
+      border: 2px solid #e1e1e1 !important;
+      outline: none !important;
+      box-shadow: none !important;
+      background-clip: padding-box !important;
+      color: #5f6063 !important;
+      padding: 10px 12px!important !important;
+    }
+
+    input:active,
+    input:focus,
+    input:hover,
+    select:active,
+    select:focus,
+    select:hover,
+    textarea:active,
+    textarea:focus,
+    textarea:hover {
+      border: 2px solid #3c4043 !important;
+    }
+
+    * label {
+      color: #5f6063;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .success-div {
+      color: #5f6063;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center!important;
+
+      img {
+        width: 140px;
+        object-fit: contain;
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-size: 1rem;
+        color: #5f6063;
+      }
+
+      a {
+        color: #5f6063;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .modal-footer {
+    border: none;
+
+    .btn {
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 4px;
+      color: #3c4043;
+      padding: 6px 20px;
+      letter-spacing: 1px;
+    }
+
+    .btn-close {
+      background-color: #e1e1e1;
+    }
+
+    .btn-submit {
+      background-color: #90BF4D;
+    }
+  }
 }
 @media (max-width: 1500px) {
   .container {

@@ -9,6 +9,15 @@ import { environment } from "../../environments/environment";
 export class NotificationService {
   baseURL = environment.API_ENDPOINT;
 
+//   {
+//     "id": 14,
+//     "appName": "NewDay Comms Website",
+//     "devName": "Wesley Mbate",
+//     "devContact": "254703926058",
+//     "registrationDate": "2023-09-05T20:55:03.640491",
+//     "apiKey": "bmV3ZGF5Y29tbTI1NEBnbWFpbC5jb206anFveXJoem1pbndmcHR2Zw=="
+// }
+
   constructor(
     private http: HttpClient
 

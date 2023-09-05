@@ -5,46 +5,42 @@
       "illustrationUrl": "assets/images/services/digital-content.svg"
     },
     {
-      "title": "Training",
-      "description": "We offer customized training programs that will help you develop the skills and knowledge you need to grow as a business, improve your performance and achieve your goals. We use technology to deliver interactive and effective training sessions that suit your schedule and budget.",
-      "illustrationUrl": "assets/images/services/training.svg"
-
-    },
-    {
-      "title": "Business Process Documentation",
-      "description": "We help you document your business processes in a clear and concise way by using best practices and standards to create process maps, flowcharts, guides  and templates that capture your workflows and procedures - as well as updating your documentation to ensure compliance and efficiency.",
-      "illustrationUrl": "assets/images/services/business-documentation.svg"
-
-    },
-    {
-      "title": "Product Development & Implementation",
-      "description": "We help you design, develop and implement innovative products that meet your customers' needs and expectations. We use agile methodologies and tools to deliver solutions that are user-friendly, functional and scalable to ensure smooth operations and integratrations to existing systems and platforms.",
-      "illustrationUrl": "assets/images/services/project-development.svg"
-
-    },
-    {
-      "title": "Marketing and Management",
-      "description": "We help you plan, execute and manage your marketing campaigns and strategies. We use data-driven insights and creative approaches to reach your target audience, generate leads and increase conversions. We also help you manage your marketing resources, budget and performance to optimize your return on investment.",
-      "illustrationUrl": "assets/images/services/marketing.svg"
-
+      "title": "Business Consultancy",
+      "description": "We help you solve your business challenges and opportunities by providing expert advice and guidance on various aspects of your business such as strategy, operations, finance, technology, innovation and more. We work with you as a team to understand your vision, goals and requirements.",
+      "illustrationUrl": "assets/images/services/business-consultancy.svg"
     },
     {
       "title": "Customer Value Management (CVM)",
       "description": "We help you enhance your customer value proposition and loyalty. We use customer segmentation, analytics, personalization and engagement techniques to understand your customers' needs, preferences and behaviors. This ensures an increase in customer lifetime value and satisfaction.",
       "illustrationUrl": "assets/images/services/cvm.svg"
-
     },
     {
       "title": "Customer Experience Service",
       "description": "We help you deliver exceptional customer experiences across all touchpoints and channels. We use technology and telephony to provide seamless and consistent service to your customers; and as a result improve your customer satisfaction, feedback and advocacy scores to build trust and loyalty.",
-      "illustrationUrl": "assets/images/services/csm.svg"
-
+      "illustrationUrl": "assets/images/services/csm.svg",
+      "hide": true
     },
     {
-      "title": "Business Consultancy",
-      "description": "We help you solve your business challenges and opportunities by providing expert advice and guidance on various aspects of your business such as strategy, operations, finance, technology, innovation and more. We work with you as a team to understand your vision, goals and requirements.",
-      "illustrationUrl": "assets/images/services/business-consultancy.svg"
-
+      "title": "Customer Satisfaction Training & Survey Tools",
+      "description": "We offer customized training programs that will help you develop the skills and knowledge you need to grow as a business, improve your performance and achieve your goals. We use technology to deliver interactive and effective training sessions that suit your schedule and budget.",
+      "illustrationUrl": "assets/images/services/training.svg"
+    },
+    {
+      "title": "Business Process Documentation",
+      "description": "We help you document your business processes in a clear and concise way by using best practices and standards to create process maps, flowcharts, guides  and templates that capture your workflows and procedures - as well as updating your documentation to ensure compliance and efficiency.",
+      "illustrationUrl": "assets/images/services/business-documentation.svg"
+    },
+    {
+      "title": "Product Development & Implementation",
+      "description": "We help you design, develop and implement innovative products that meet your customers' needs and expectations. We use agile methodologies and tools to deliver solutions that are user-friendly, functional and scalable to ensure smooth operations and integratrations to existing systems and platforms.",
+      "illustrationUrl": "assets/images/services/project-development.svg",
+      "hide": true
+    },
+    {
+      "title": "Marketing and Management",
+      "description": "We help you plan, execute and manage your marketing campaigns and strategies. We use data-driven insights and creative approaches to reach your target audience, generate leads and increase conversions. We also help you manage your marketing resources, budget and performance to optimize your return on investment.",
+      "illustrationUrl": "assets/images/services/marketing.svg",
+      "hide": true
     }
   ]
 }

@@ -10,18 +10,18 @@
         </p>
 
         <div class="social-links">
-          <a href="https://wa.me/" rel="external nofollow noopener" target="_blank">
+          <!-- <a href="https://wa.me/" rel="external nofollow noopener" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
-          </a>
+          </a> -->
           <a href="tel:+6544444644" target="_blank">
             <i class="fa-solid fa-phone"></i>
           </a>
-          <a href="mailto:support@newday.com" target="_blank">
+          <a href="mailto:newdaycomm254.com" target="_blank">
             <i class="fa-solid fa-envelope"></i>
           </a>
-          <a target="_blank">
+          <!-- <a target="_blank">
             <i class="fa-brands fa-facebook-f"></i>
-          </a>
+          </a> -->
         </div>
 
         <div class="illustration-holder">
@@ -31,7 +31,17 @@
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-6">
-        <div class="form">
+
+        <div class="success-div" *ngIf="isSuccess" [@fadeIn]>
+          <img src="assets/images/email-sent.png" alt="email-sent">
+
+          <span class="d-block">We've received your service inquiry details for <strong>{{user.category}}</strong>. <br>
+            <!-- with reference number <strong class="greenText d-inline-block">{{refId}}</strong> -->
+            Our Team will be in touch within the next 48 hours.
+          </span>
+        </div>
+
+        <div class="form" *ngIf="!isSuccess" [@fadeIn]>
           <div class="form-group">
             <label for="">Your name <sup class="redText">*</sup></label>
             <input class="form-control" type="text" name="name" [(ngModel)]="user.name" autocomplete="new-password" placeholder="Enter your name">
@@ -67,7 +77,11 @@
             <textarea class="form-control" name="message" rows="1" [(ngModel)]="user.message" placeholder="Type your message"></textarea>
           </div>
 
-          <button class="btn btn-submit" [disabled]="!user.name || !user.email || !user.phone || !user.message">Submit</button>
+          <div class="alert alert-danger" *ngIf="hasError" [@fadeIn]>
+            <p class="m-0">Sorry, your details could not be sent at this time, please try again later !</p>
+          </div>
+
+          <button class="btn btn-submit" [disabled]="!user.name || !user.email || !user.phone || !user.message || emailInvalid || sending" (click)="sendEmail()">{{sending ? 'Sending ...' : 'Send'}}</button>
         </div>
       </div>
     </div>

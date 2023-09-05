@@ -3,6 +3,7 @@ import { fromEvent, map, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Observable } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
+import { style, state, animate, transition, trigger, query, stagger } from '@angular/animations';
 
 import services from "../../../assets/jsons/services.json";
 import { INotificationDTO, NotificationDTO } from '../../services/notification-data.model';
@@ -11,7 +12,25 @@ import { NotificationService } from "../../services/notification.service";
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({ opacity: 0 }),
+        animate(600, style({ opacity: 1 }))
+      ])
+    ]),
+    trigger('fadeInGrow', [
+      transition(':enter', [
+        query(':enter', [
+          style({ opacity: 0, marginTop: 40 }),
+          stagger('120ms', [
+            animate('500ms ease', style({ opacity: 1, marginTop: 0 }))
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
 export class ContactFormComponent implements OnInit {
 
@@ -23,6 +42,7 @@ export class ContactFormComponent implements OnInit {
   refId = '';
   hasError = false;
   sending = false;
+  isSuccess = false;
 
   @ViewChild('emailInput') emailInput!: ElementRef;
 
@@ -68,8 +88,7 @@ export class ContactFormComponent implements OnInit {
 
   reset(): void {
     // this.router.navigate(['/']);
-    window.history.back();
-
+    // window.history.back();
 
     this.user = {
       category: 'General'
@@ -95,6 +114,9 @@ export class ContactFormComponent implements OnInit {
 
     this.hasError = false;
     this.sending = false;
+    this.isSuccess = true;
+
+    this.reset();
   }
 
   protected onSaveError(error: any) {
@@ -107,8 +129,8 @@ export class ContactFormComponent implements OnInit {
   private getBusinessNotificationDTO(): any {
     return {
       ...new NotificationDTO(),
-      receiverEmail: 'tecomadvance@gmail.com',
-      subject: 'New Day Communications Website Mail Request ' + this.refId,
+      receiverEmail: 'newdaycomm254@gmail.com',
+      subject: 'New Day Communications Website Request ' + this.refId,
       body: this.createBusinessMessage(),
       html: true,
       isMultiPart: false
@@ -121,7 +143,7 @@ export class ContactFormComponent implements OnInit {
     return '<!DOCTYPE html>\n' +
       '<html lang="en">\n' +
       '<head>\n' +
-      '    <title> New Day Communications Website Mail Request ' + this.refId + '</title>\n' +
+      '    <title> New Day Communications Website Request ' + this.refId + '</title>\n' +
       '    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
       '</head>' +
       '<body>\n' +

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 
 export class HttpTokenInterceptor implements HttpInterceptor {
-  token = "dGVjb21hZHZhbmNlQGdtYWlsLmNvbTpzdXJ3YW9obnNwdXJoZHRj";
+  token = "bmV3ZGF5Y29tbTI1NEBnbWFpbC5jb206anFveXJoem1pbndmcHR2Zw";
 
   constructor(
     private router: Router
@@ -36,8 +36,8 @@ export class HttpTokenInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(catchError(err => {
       if (err.status === 401 || err.status === 403) {
         console.log(err);
-
       }
+
       const error = err.error.message || err.statusText;
       return throwError(error);
     }));
