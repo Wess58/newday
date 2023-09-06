@@ -98,6 +98,7 @@ export class ServicesComponent implements OnInit {
     this.emailInvalid = false;
     this.hasError = false;
     this.sending = false;
+    this.stage = 1;
   }
 
   generateRefId(): void {
