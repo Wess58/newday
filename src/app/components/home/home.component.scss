@@ -214,6 +214,17 @@
         filter: drop-shadow(0 10px 5px #4673b630);
       }
     }
+
+    .btn-cta{
+      background-color: #90BF4D;
+      border: 1px solid #90BF4D;
+      border-radius: 30px;
+      font-style: 0.9rem;
+      letter-spacing: 1px;
+      color: #f1f1f1;
+      font-weight: 600;
+      padding: 10px 50px;
+    }
   }
 }
 @media (max-width: 1500px) {}

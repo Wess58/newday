@@ -8,7 +8,7 @@
           <div class="content">
             <h1>{{content.title}}</h1>
             <p>{{content.description}}</p>
-            <button class="btn btn-cta" [routerLink]="'/contac-us'">Contact us</button>
+            <button class="btn btn-cta" [routerLink]="'/contact-us'">Contact us</button>
           </div>
         </div>
 
@@ -24,7 +24,7 @@
       <h3 class="section-title">What We <span>Do</span></h3>
 
       <div class="row mb-5">
-        <div class="col-md-4 col-lg-3" *ngFor="let service of services.slice(0,4);index as i">
+        <div class="col-md-4" *ngFor="let service of services.slice(0,3);index as i">
           <div class="service-item">
             <div class="service-illustration-holder">
               <img [src]="service.illustrationUrl" alt="">
@@ -70,6 +70,9 @@
         <div class="col-md-1"></div>
         <div class="col-md-6">
           <span class="services-section-description">Helping you implement solutions that are tailored to your specific needs using <strong>mordern</strong> methodologies and tools to optimize your <strong>return on investment</strong>.</span>
+
+          <button class="btn btn-cta" [routerLink]="'/about'">About us</button>
+
         </div>
       </div>
     </div>
